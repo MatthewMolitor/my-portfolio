@@ -1,28 +1,24 @@
+import Appmode from './AppMode.js';
+import Navbar from './Navbar.js';
 import '../styles/App.css';
+import { useState } from 'react';
+import NavBar from './Navbar.js';
+import Profile from './Profile.js';
+import About from './About.js';
+import NavigationTabs from './NavigationTabs.js';
+
 
 function App() {
+  const [mode,setMode] = useState(Appmode.PROFILE);
+
   return (
     <div className="App">
       <header className="App-header">
-      <div className="navbar">
-        navbar
-      </div>
-      <div className='App-body'>
-        <div className='App-sub-body'>
-          <p className='centered'>
-            Matthew Molitor<br></br>software developer
-          </p>
-        </div>
-        <div className='App-sub-body2'>
-          <p className='centered'>
-            <img src = {process.env.PUBLIC_URL + 'images/placeholder.jpg'} alt ='placeholder male profile picture' height={'300'} width={'300'}/>
-          </p>
-        </div>
-      </div>
-      <div className='App-footer'>
-        <a href='https://github.com/MatthewMolitor'><img src = {process.env.PUBLIC_URL + 'images/github.png'} alt='github logo' height={'50'} width={'50'}/></a>
-        <a href='https://www.linkedin.com/in/matthewemolitor/'><img src = {process.env.PUBLIC_URL + 'images/linkedin.png'} alt='linkedin logo' height={'50'} width={'50'}/></a>
-      </div>
+      <NavBar></NavBar>
+      <NavigationTabs mode = {mode}
+                      setMode = {setMode}/>
+      {mode== Appmode.PROFILE && <Profile></Profile>}
+      {mode== Appmode.ABOUT && <About></About>}
       </header>
     </div>
   );
