@@ -29,6 +29,15 @@ function NavigationTabs(props) {
                     value={AppMode.ABOUT}>
                     About
                 </button>
+                <button id="ProjectsMode" type="button"
+                    className={"navtab-btn" +
+                        (props.mode === AppMode.FEED ? " navtab-selected" : "")}
+                    role="tab" tabIndex="0" aria-selected="true"
+                    aria-controls="ProjectsModeTab"
+                    onClick={handleModeChange}
+                    value={AppMode.PROJECTS}>
+                    Projects
+                </button>
             </div>
     ); 
   }

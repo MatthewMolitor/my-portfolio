@@ -3,7 +3,8 @@
 const AppMode = {
     LOGIN: "LoginMode",
     PROFILE: "ProfileMode",
-    ABOUT: "AboutMode"
+    ABOUT: "AboutMode",
+    PROJECTS: "ProjectsMode"
 };
 
 Object.freeze(AppMode); //This ensures that the object is immutable.

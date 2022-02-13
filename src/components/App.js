@@ -6,6 +6,7 @@ import NavBar from './Navbar.js';
 import Profile from './Profile.js';
 import About from './About.js';
 import NavigationTabs from './NavigationTabs.js';
+import Projects from './Projects.js';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                       setMode = {setMode}/>
       {mode== Appmode.PROFILE && <Profile></Profile>}
       {mode== Appmode.ABOUT && <About></About>}
+      {mode== Appmode.PROJECTS && <Projects></Projects>}
       </header>
     </div>
   );
