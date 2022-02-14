@@ -123,3 +123,18 @@
   cursor: default;
   border-bottom: 4px solid var(--main-red-color) !important;
 }
+
+/*************************************************************************
+* CSS CLASSES FOR Projects TAB
+*************************************************************************/
+/* .modetab -- Style the container enclosing the mode tabs */
+.projects-body {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  width: 80%;
+}
